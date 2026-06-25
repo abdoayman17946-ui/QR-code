@@ -6,10 +6,10 @@
     <title>دعوة الفرح والحنة</title>
     <!-- استدعاء مكتبة الأيقونات Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- خطوط جوجل لتحسين المظهر -->
+    <!-- خطوط جوجل الفخمة -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Tajawal:wght@500;800&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -19,37 +19,62 @@
         }
 
         body {
-            font-family: 'Tajawal', 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            font-family: 'Tajawal', sans-serif;
+            /* خلفية متدرجة فخمة تجمع بين الرمادي الداكن والزيتوني الملكي */
+            background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* إضافة لمسة ضوئية خافتة في الخلفية لمزيد من الاحترافية */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 50%;
+            top: -10%;
+            right: -10%;
+            filter: blur(80px);
         }
 
         .card-container {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            /* تأثير الزجاج الاحترافي Glassmorphism */
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 50px 35px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             text-align: center;
-            max-width: 450px;
+            max-width: 440px;
             width: 100%;
-            border: 1px solid rgba(220, 180, 111, 0.3); /* إطار ذهبي خفيف */
+            /* إطار ذهبي ميتاليك رفيع جداً */
+            border: 1px solid rgba(212, 175, 55, 0.2); 
+            position: relative;
         }
 
         .title {
-            color: #4a4a4a;
-            font-size: 24px;
-            margin-bottom: 10px;
-            font-weight: 800;
+            font-family: 'Amiri', serif; /* خط عربي كلاسيكي فخم للمناسبات */
+            color: #d4af37; /* لون ذهبي ملكي */
+            font-size: 32px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
         .subtitle {
-            color: #8e8e8e;
+            color: #9ca3af;
             font-size: 14px;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            line-height: 1.6;
         }
 
         .buttons-wrapper {
@@ -62,63 +87,55 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 18px 25px;
-            background: #ffffff;
-            border: 2px solid #e0e0e0;
-            border-radius: 15px;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
             text-decoration: none;
-            color: #333;
-            font-size: 18px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            color: #f3f4f6; /* أبيض ناعم مريح للعين */
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* تأثير عند تحريك الماوس فوق الأزرار */
+        /* تأثير الاحترافي عند تمرير الماوس */
         .custom-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .btn-henna:hover {
-            border-color: #ff7597; /* لون وردي للحنة */
-            box-shadow: 0 8px 15px rgba(255, 117, 151, 0.15);
-        }
-
-        .btn-wedding:hover {
-            border-color: #d4af37; /* لون ذهبي للفرح */
-            box-shadow: 0 8px 15px rgba(212, 175, 55, 0.15);
+            transform: translateY(-4px);
+            background: rgba(212, 175, 55, 0.08);
+            border-color: #d4af37;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+            color: #ffffff;
         }
 
         .icon-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
+            width: 46px;
+            height: 46px;
             border-radius: 12px;
-            font-size: 20px;
+            font-size: 18px;
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.4s ease;
         }
 
-        /* ألوان الأيقونات والخلفيات الخاصة بها */
-        .henna-icon {
-            background-color: #fff0f3;
-            color: #ff7597; /* وردي */
-        }
-
-        .wedding-icon {
-            background-color: #fff9e6;
-            color: #d4af37; /* ذهبي */
+        .custom-btn:hover .icon-wrap {
+            background: #d4af37;
+            color: #111827;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
         }
 
         .arrow-icon {
-            color: #b0b0b0;
-            font-size: 16px;
-            transition: transform 0.3s ease;
+            color: #6b7280;
+            font-size: 14px;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
 
         .custom-btn:hover .arrow-icon {
-            transform: translateX(-5px); /* حركة السهم جهة اليمين عند الهوفر */
-            color: #333;
+            transform: translateX(-5px);
+            color: #d4af37;
         }
     </style>
 </head>
@@ -130,10 +147,10 @@
 
         <div class="buttons-wrapper">
             
-            <!-- أولاً: زر موعد الحنة (استبدل النص بالرابط الخاص بك) -->
-            <a href="https://ahmed-hager-henaa-ajcl.vercel.app/" target="_blank" class="custom-btn btn-henna">
+            <!-- أولاً: زر موعد الحنة -->
+            <a href="ضع_رابط_موعد_الحنة_هنا" target="_blank" class="custom-btn">
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="icon-wrap henna-icon">
+                    <div class="icon-wrap">
                         <i class="fa-solid fa-heart"></i> <!-- أيقونة القلب -->
                     </div>
                     <span>موعد الحنة</span>
@@ -141,10 +158,10 @@
                 <i class="fa-solid fa-chevron-left arrow-icon"></i>
             </a>
 
-            <!-- ثانياً: زر موعد الفرح (استبدل النص بالرابط الخاص بك) -->
-            <a href="https://ahmed-hager-aosq.vercel.app/" target="_blank" class="custom-btn btn-wedding">
+            <!-- ثانياً: زر موعد الفرح -->
+            <a href="ضع_رابط_موعد_الفرح_هنا" target="_blank" class="custom-btn">
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="icon-wrap wedding-icon">
+                    <div class="icon-wrap">
                         <i class="fa-solid fa-ring"></i> <!-- أيقونة الخاتم -->
                     </div>
                     <span>موعد الفرح</span>
