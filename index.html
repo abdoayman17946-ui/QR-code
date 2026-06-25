@@ -6,10 +6,10 @@
     <title>دعوة الفرح والحنة</title>
     <!-- استدعاء مكتبة الأيقونات Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- خطوط جوجل الاحترافية -->
+    <!-- خطوط جوجل الاحترافية الناعمة -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Tajawal:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;500;700&family=Amiri:ital@1&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -19,9 +19,9 @@
         }
 
         body {
-            font-family: 'Tajawal', sans-serif;
-            /* خلفية عامة فخمة وهادية لإبراز الأزرار */
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            font-family: 'Alexandria', sans-serif;
+            /* خلفية ناعمة جداً مريحة للعين تعكس الفخامة الهادئة */
+            background: linear-gradient(135deg, #f4f4f6 0%, #e9e9ed 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -30,126 +30,119 @@
         }
 
         .card-container {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            padding: 50px 35px;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            background: #ffffff;
+            padding: 55px 40px;
+            border-radius: 28px;
+            /* ظلال ناعمة جداً وطبيعية بدون حدة */
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.04), 0 10px 20px rgba(0, 0, 0, 0.02);
             text-align: center;
             max-width: 440px;
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.08); 
+            border: 1px solid rgba(230, 230, 235, 0.8); 
         }
 
         .title {
             font-family: 'Amiri', serif;
-            color: #ffffff;
-            font-size: 34px;
-            margin-bottom: 12px;
-            font-weight: bold;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            color: #2d2d2e;
+            font-size: 36px;
+            margin-bottom: 14px;
+            font-weight: normal;
         }
 
         .subtitle {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 40px;
-            font-weight: 400;
-            line-height: 1.6;
+            color: #8a8a93;
+            font-size: 13.5px;
+            margin-bottom: 45px;
+            font-weight: 300;
+            letter-spacing: 0.2px;
         }
 
         .buttons-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 20px;
         }
 
         .custom-btn {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 25px;
+            padding: 18px 24px;
             border-radius: 20px;
             text-decoration: none;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 700;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16.5px;
+            font-weight: 500;
+            /* حركة انتقالية ناعمة جداً فائقة الاحترافية */
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        background-color 0.4s ease, 
+                        box-shadow 0.4s ease,
+                        border-color 0.4s ease;
             position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* --- 1. خلفية موعد الحنة المميزة (Rose Gold / Burgundy) --- */
+        /* --- 1. زر موعد الحنة (Dusty Rose & Earthy Tones) --- */
         .btn-henna {
-            background: linear-gradient(135deg, #881337 0%, #4c0519 100%);
-            border: 1px solid rgba(251, 113, 133, 0.3);
+            background-color: #fcf6f6;
+            color: #8c5858;
+            border: 1px solid #f3e6e6;
         }
 
         .btn-henna:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(251, 113, 133, 0.25);
-            border-color: #fb7185;
+            transform: translateY(-4px);
+            background-color: #f7ebeb;
+            border-color: #e3cdcd;
+            box-shadow: 0 12px 25px rgba(140, 88, 88, 0.06);
         }
 
         .btn-henna .icon-wrap {
-            background: rgba(251, 113, 133, 0.15);
-            color: #fda4af;
-            border: 1px solid rgba(251, 113, 133, 0.3);
+            background: #f5e6e6;
+            color: #8c5858;
         }
 
-        .btn-henna:hover .icon-wrap {
-            background: #fb7185;
-            color: #4c0519;
-            box-shadow: 0 0 15px rgba(251, 113, 133, 0.6);
-        }
-
-        /* --- 2. خلفية موعد الفرح المميزة (Luxury Royal Blue / Gold) --- */
+        /* --- 2. زر موعد الفرح (Champagne Gold & Warm Ivory) --- */
         .btn-wedding {
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-            border: 1px solid rgba(234, 179, 8 0.3);
+            background-color: #fbf9f3;
+            color: #8f7647;
+            border: 1px solid #f3ede0;
         }
 
         .btn-wedding:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(234, 179, 8, 0.25);
-            border-color: #eab308;
+            transform: translateY(-4px);
+            background-color: #f7f2e6;
+            border-color: #e6dac1;
+            box-shadow: 0 12px 25px rgba(143, 118, 71, 0.06);
         }
 
         .btn-wedding .icon-wrap {
-            background: rgba(234, 179, 8, 0.15);
-            color: #fef08a;
-            border: 1px solid rgba(234, 179, 8, 0.3);
+            background: #f3ede0;
+            color: #8f7647;
         }
 
-        .btn-wedding:hover .icon-wrap {
-            background: #eab308;
-            color: #0f172a;
-            box-shadow: 0 0 15px rgba(234, 179, 8, 0.6);
-        }
-
-        /* --- الأجزاء المشتركة --- */
+        /* --- العناصر المشتركة للأيقونات --- */
         .icon-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 46px;
-            height: 46px;
+            width: 44px;
+            height: 44px;
             border-radius: 14px;
-            font-size: 18px;
-            transition: all 0.4s ease;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .custom-btn:hover .icon-wrap {
+            transform: scale(1.05);
         }
 
         .arrow-icon {
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 14px;
+            color: #b5b5be;
+            font-size: 13px;
             transition: transform 0.3s ease, color 0.3s ease;
         }
 
         .custom-btn:hover .arrow-icon {
-            transform: translateX(-5px);
-            color: #ffffff;
+            transform: translateX(-4px);
+            color: inherit; /* بيأخد نفس لون النص الرئيسي للزر عند الهوفر */
         }
     </style>
 </head>
@@ -161,9 +154,9 @@
 
         <div class="buttons-wrapper">
             
-            <!-- أولاً: زر موعد الحنة بخلفية الـ Rose Gold الدافئة -->
+            <!-- زر موعد الحنة بستايل الـ Dusty Rose -->
             <a href="ضع_رابط_موعد_الحنة_هنا" target="_blank" class="custom-btn btn-henna">
-                <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="display: flex; align-items: center; gap: 16px;">
                     <div class="icon-wrap">
                         <i class="fa-solid fa-heart"></i>
                     </div>
@@ -172,9 +165,9 @@
                 <i class="fa-solid fa-chevron-left arrow-icon"></i>
             </a>
 
-            <!-- ثانياً: زر موعد الفرح بخلفية الأزرق الملكي والذهبي -->
+            <!-- زر موعد الفرح بستايل الـ Champagne Gold -->
             <a href="ضع_رابط_موعد_الفرح_هنا" target="_blank" class="custom-btn btn-wedding">
-                <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="display: flex; align-items: center; gap: 16px;">
                     <div class="icon-wrap">
                         <i class="fa-solid fa-ring"></i>
                     </div>
